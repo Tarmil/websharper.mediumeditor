@@ -153,7 +153,7 @@ module Definition =
     let MediumEditorClass =
         Class "MediumEditor"
         |+> Static [
-            Constructor (Elements * MediumEditorOptions.Type)
+            Constructor (Elements * !? MediumEditorOptions.Type)
 
             "getEditorFromElement" => T<JavaScript.Dom.Element> ^-> TSelf
 
