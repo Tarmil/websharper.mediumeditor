@@ -41,17 +41,17 @@ let editor =
     )
 ```
 
-See the options in the [original documentation]().
+See the options in the [original documentation](https://github.com/yabwe/medium-editor/blob/master/OPTIONS.md).
 
 Every field where we have to give an object has its own record type. If the element could be disabled by giving a `false` value, we have to use Unions. This table shows the field-record pairs and the Union type if it needs one:
 
-| Field            | Record type             | Has union |
-|------------------|-------------------------|-----------|
-| toolbar          | ToolbarOptions          | Union1Of2 |
-| anchor           | AnchorOptions           | Union1Of2 |
-| placeholder      | PlaceholderOptions      | Union1Of2 |
-| anchorPreview    | AnchorPreviewOptions    |           |
-| paste            | PasteOptions            |           |
-| keyboardCommands | KeyboardCommandsOptions | Union1Of2 |
-| link             | LinkOptions             |           |
-| parse            | ParseOptions            |           |
+| Field              | Record type               | Has union |
+|--------------------|---------------------------|-----------|
+| `toolbar`          | `ToolbarOptions`          | Union1Of2 |
+| `anchor`           | `AnchorOptions`           | Union1Of2 |
+| `placeholder`      | `PlaceholderOptions`      | Union1Of2 |
+| `anchorPreview`    | `AnchorPreviewOptions`    |           |
+| `paste`            | `PasteOptions`            |           |
+| `keyboardCommands` | `KeyboardCommandsOptions` | Union1Of2 |
+| `link`             | `LinkOptions`             |           |
+| `parse`            | `ParseOptions`            |           |
