@@ -103,7 +103,7 @@ module Definition =
             Optional =
                 [
                     "activeButtonClass", T<string>
-                    "buttonLabels", T<bool>
+                    "buttonLabels", T<string>
                     "contentWindow", T<JavaScript.Window>
                     "delay", T<int>
                     "disableReturn", T<bool>

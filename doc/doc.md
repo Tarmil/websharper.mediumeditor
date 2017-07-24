@@ -48,9 +48,9 @@ Every field where we have to give an object has its own record type. If the elem
 | Field              | Record type               | Has union |
 |--------------------|---------------------------|-----------|
 | `toolbar`          | `ToolbarOptions`          | Union1Of2 |
-| `anchor`           | `AnchorOptions`           | Union1Of2 |
+| `anchor`           | `AnchorOptions`           |           |
 | `placeholder`      | `PlaceholderOptions`      | Union1Of2 |
-| `anchorPreview`    | `AnchorPreviewOptions`    |           |
+| `anchorPreview`    | `AnchorPreviewOptions`    | Union1Of2 |
 | `paste`            | `PasteOptions`            |           |
 | `keyboardCommands` | `KeyboardCommandsOptions` | Union1Of2 |
 | `link`             | `LinkOptions`             |           |
