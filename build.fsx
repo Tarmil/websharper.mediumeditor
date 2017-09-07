@@ -31,7 +31,7 @@ bt.Solution [
     bt.NuGet.CreatePackage()
         .Configure(fun c ->
             { c with
-                Title = Some "WebSharper.MediumEditor"
+                Title = Some "WebSharper bindings for MediumEditor"
                 LicenseUrl = Some "http://websharper.com/licensing"
                 ProjectUrl = Some "https://github.com/intellifactory/https://github.com/intellifactory/websharper.mediumeditor"
                 Description = "WebSharper Extension for Medium Editor 5.23.1"
