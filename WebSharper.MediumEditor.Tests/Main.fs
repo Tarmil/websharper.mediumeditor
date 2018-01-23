@@ -3,9 +3,9 @@ namespace WebSharper.MediumEditor.Tests
 open WebSharper
 open WebSharper.MediumEditor
 open WebSharper.Sitelets
-open WebSharper.UI.Next
-open WebSharper.UI.Next.Client
-open WebSharper.UI.Next.Html
+open WebSharper.UI
+open WebSharper.UI.Client
+open WebSharper.UI.Html
 
 [<JavaScript>]
 module Client =
@@ -20,36 +20,12 @@ module Client =
             }
 
             Test "Constructor test" {
-                let editor = div []
+                let editor = div [] []
                 notEqualMsg (MediumEditor(editor.Dom, MediumEditorOptions())) (JS.Undefined) "Medium Editor constructor"
             }
         }
 
-#if ZAFIR
+    [<SPAEntryPoint>]
     let RunTests() =
-        Runner.RunTests [
-            Tests
-        ]
-#endif
-
-module Site =
-    open WebSharper.UI.Next.Server
-    open WebSharper.UI.Next.Html
-
-    [<Website>]
-    let Main =
-        Application.SinglePage (fun ctx ->
-            Content.Page(
-                Title = "WebSharper.MediumEditor Tests",
-                Body = [
-#if ZAFIR
-                    client <@ Client.RunTests() @>
-#else
-                    WebSharper.Testing.Runner.Run [
-                        System.Reflection.Assembly.GetExecutingAssembly()
-                    ]
-                    |> Doc.WebControl
-#endif
-                ]
-            )
-        )
+        let e = Runner.RunTests [Tests]
+        e.ReplaceInDom(JS.Document.QuerySelector "#body")
