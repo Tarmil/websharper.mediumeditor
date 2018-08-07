@@ -20,7 +20,7 @@ module Client =
             }
 
             Test "Constructor test" {
-                let editor = div [] []
+                let editor = Elt.div [] []
                 notEqualMsg (MediumEditor(editor.Dom, MediumEditorOptions())) (JS.Undefined) "Medium Editor constructor"
             }
         }
